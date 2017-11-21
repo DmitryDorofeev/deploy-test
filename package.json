@@ -10,7 +10,7 @@
 
     "build": "node build/build.js",
     "docker:build": "docker build -t dmitrydorofeev/tech-frontend .",
-    "docker:push": "docker push dmitrydorofeev/tech-frontend",
+    "docker:push": "docker push dmitrydorofeev/tech-frontend"
   },
   "dependencies": {
     "vue": "^2.5.2"
