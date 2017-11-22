@@ -71,5 +71,6 @@ export default {
   border-radius: 2px;
   box-shadow: none;
   border: 1px solid #e0e0e0;
+  padding: 0 10px;
 }
 </style>

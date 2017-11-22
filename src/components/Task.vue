@@ -32,5 +32,6 @@ h1, h2 {
 
 .done {
   color: #42b983;
+  text-decoration: line-through;
 }
 </style>
