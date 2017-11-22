@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <input class="input" type="text" v-model="title" @keypress="addTask"/>
+    <input class="input" type="text" v-model="title" @keypress="addTask" placeholder="Task name..."/>
     <Task v-for="task in tasks" :name="task.name" :done="task.done" :key="task._id" :id="task._id" @done="taskDone"/>
   </div>
 </template>
@@ -66,5 +66,10 @@ export default {
 
 .input {
   height: 36px;
+  font-size: 20px;
+  width: 200px;
+  border-radius: 2px;
+  box-shadow: none;
+  border: 1px solid #e0e0e0;
 }
 </style>
