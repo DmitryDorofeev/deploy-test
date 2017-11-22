@@ -5,7 +5,8 @@ services:
     image: dmitrydorofeev/tech-frontend
     ports:
       - 80:80
+      - 443:443
     links:
       - backend:backend
     volumes:
-      - /tmp/letsencrypt/etc/live/jsdaddy.tech/:/etc/certs/
+      - "/tmp/letsencrypt/etc/live/jsdaddy.tech:/certs"
