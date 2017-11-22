@@ -13,9 +13,8 @@ script:
 - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
 - npm run docker:build
 - npm run docker:push
-- scp ./docker-compose.yml root@${DEPLOYMENT_SERVER_IP}:~/
-- ssh root@$SERVER_IP "docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}; docker
-  pull dmitrydorofeev/tech-frontend; docker-compose up -d"
+- scp ./docker-compose.yml root@${SERVER_IP}:~/docker-compose.frontend.yml
+- ssh root@$SERVER_IP "docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}; docker pull dmitrydorofeev/tech-frontend; docker-compose up -t docker-compose.backend.yml -t docker-compose.frontend.yml -d"
 branches:
   only:
   - master

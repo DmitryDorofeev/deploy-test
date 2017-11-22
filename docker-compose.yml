@@ -7,13 +7,3 @@ services:
       - 80:80
     links:
       - backend:backend
-
-  backend:
-    image: dmitrydorofeev/tech-backend
-    links:
-      - mongo:mongo
-
-  mongo:
-    image: mongo
-    volumes:
-      - /data/db:/data/db
