@@ -9,4 +9,5 @@ services:
     links:
       - backend:backend
     volumes:
-      - "/tmp/letsencrypt/etc/live/jsdaddy.tech:/certs"
+      - "/tmp/letsencrypt/etc/live/jsdaddy.tech:/etc/certs"
+      - "/tmp/letsencrypt/etc/archive:/archive"
