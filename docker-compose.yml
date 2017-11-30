@@ -2,6 +2,7 @@ version: '3'
 
 services:
   frontend:
+    build: .
     image: dmitrydorofeev/tech-frontend
     ports:
       - 80:80
